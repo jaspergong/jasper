@@ -15,7 +15,7 @@ export default class UserLayout extends Component {
   render() {
     return (
       <Layout className="user-layout" style={styles.container}>
-        <div className="header">
+        {/*<div className="header">*/}
           {/*<a href="#" className="meta">*/}
             {/*<img*/}
               {/*className="logo"*/}
@@ -24,8 +24,8 @@ export default class UserLayout extends Component {
             {/*/>*/}
             {/*<span className="title">飞冰</span>*/}
           {/*</a>*/}
-          <p className="title">JASPER ADMIN</p>
-        </div>
+          {/*<p className="title">JASPER ADMIN</p>*/}
+        {/*</div>*/}
 
         <Switch>
           {routerData.map((item, index) => {
@@ -49,14 +49,14 @@ export default class UserLayout extends Component {
 
 const styles = {
   container: {
-    position: 'relative',
-    width: '100%',
-    height: '100vh',
-    paddingTop: '100px',
-    background: '#f0f2f5',
-    backgroundImage:
-      'url(https://img.alicdn.com/tfs/TB1kOoAqv1TBuNjy0FjXXajyXXa-600-600.png)',
-    backgroundSize: 'contain',
+    // position: 'relative',
+    // width: '100%',
+    // height: '100vh',
+    // paddingTop: '100px',
+    // background: '#f0f2f5',
+    // backgroundImage:
+    //   'url(https://img.alicdn.com/tfs/TB1kOoAqv1TBuNjy0FjXXajyXXa-600-600.png)',
+    // backgroundSize: 'contain',
   },
 };
 
