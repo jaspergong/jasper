@@ -107,12 +107,12 @@ class UserLogin extends Component {
                 >
                   登 录
                 </Button>
-                <p className="account">
-                  <span className="tips-text" style={{ marginRight: '20px' }}>
-                    管理员登录：admin/admin
-                  </span>
-                  <span className="tips-text">用户登录：user/user</span>
-                </p>
+                {/*<p className="account">*/}
+                  {/*<span className="tips-text" style={{ marginRight: '20px' }}>*/}
+                    {/*管理员登录：admin/admin*/}
+                  {/*</span>*/}
+                  {/*<span className="tips-text">用户登录：user/user</span>*/}
+                {/*</p>*/}
               </Row>
 
               <Row className="tips">

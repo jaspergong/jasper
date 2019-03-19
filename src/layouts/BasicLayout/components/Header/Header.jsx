@@ -73,7 +73,7 @@ export default class Header extends PureComponent {
                   className="user-avatar"
                 />
                 <div className="user-profile">
-                  <span className="user-name">淘小宝</span>
+                  <span className="user-name">Jasper</span>
                   <br />
                   <span className="user-department">技术部</span>
                 </div>
@@ -88,16 +88,16 @@ export default class Header extends PureComponent {
             className="user-profile-menu"
           >
             <ul>
-              <li className="user-profile-menu-item">
-                <Link to="/">
-                  <FoundationSymbol type="person" size="small" />
-                  我的主页
-                </Link>
-              </li>
+              {/*<li className="user-profile-menu-item">*/}
+                {/*<Link to="/">*/}
+                  {/*<FoundationSymbol type="person" size="small" />*/}
+                  {/*我的主页*/}
+                {/*</Link>*/}
+              {/*</li>*/}
               <li className="user-profile-menu-item">
                 <Link to="/">
                   <FoundationSymbol type="repair" size="small" />
-                  设置
+                  修改密码
                 </Link>
               </li>
               <li className="user-profile-menu-item">

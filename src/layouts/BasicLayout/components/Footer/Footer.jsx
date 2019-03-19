@@ -24,12 +24,12 @@ export default class Footer extends PureComponent {
           <div className="copyright">
             © 2018 Theme designed by{' '}
             <a
-              href="https://github.com/alibaba/ice"
+              href="https://gitee.com/Jaspergong/Jasper.git"
               target="_blank"
               className="copyright-link"
               rel="noopener noreferrer"
             >
-              ICE
+              Jasper
             </a>
           </div>
         </div>
