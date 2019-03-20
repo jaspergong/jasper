@@ -216,6 +216,7 @@ export default class Aside extends Component {
             <Icon
               type={this.state.collapse ? 'arrow-right' : 'arrow-left'}
               size="small"
+              style={{marginTop:'10px'}}
             />
           </a>
         )}

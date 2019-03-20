@@ -18,7 +18,6 @@ import './scss/index.scss';
 
 // 设置默认的皮肤配置，支持 dark 和 light 两套皮肤配置
 const theme = 'light';
-
 @withRouter
 export default class BasicLayout extends Component {
   static propTypes = {};
@@ -79,9 +78,9 @@ export default class BasicLayout extends Component {
     const content = <MainRoutes />;
 
     const layout = (
-      <Layout fixable>
+      <Layout fixable style={{padding: '0 0'}}>
         {header}
-        <Layout.Section>
+        <Layout.Section style={{marginTop:'0'}}>
           {aside}
           <Layout.Main scrollable>
             {content}

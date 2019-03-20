@@ -8,7 +8,7 @@ export default class Logo extends PureComponent {
   render() {
     return (
       <div className="logo" style={{}}>
-        <Link to="/" className="logo-text">
+        <Link to="/" className="logo-text" style={{color:'#f2f3f7'}}>
           Jasper
         </Link>
       </div>

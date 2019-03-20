@@ -20,7 +20,7 @@ export default class Header extends PureComponent {
       <Layout.Header
         theme={theme}
         className={cx('ice-design-layout-header', className)}
-        style={{ ...style }}
+        style={{ ...style, backgroundColor:'#006efe' }}
       >
         <Logo />
 
@@ -73,9 +73,9 @@ export default class Header extends PureComponent {
                   className="user-avatar"
                 />
                 <div className="user-profile">
-                  <span className="user-name">Jasper</span>
+                  <span className="user-name" style={styles.spancolor}>Jasper</span>
                   <br />
-                  <span className="user-department">技术部</span>
+                  <span className="user-department" style={styles.spancolor}>技术部</span>
                 </div>
                 <Icon
                   type="arrow-down-filling"
@@ -113,3 +113,8 @@ export default class Header extends PureComponent {
     );
   }
 }
+const styles = {
+  spancolor: {
+    color: 'rgb(242, 243, 247)',
+  },
+};
