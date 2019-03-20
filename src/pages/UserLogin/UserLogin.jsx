@@ -44,14 +44,39 @@ class UserLogin extends Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     this.refs.form.validateAll((errors, values) => {
       if (errors) {
-        console.log('errors', errors);
         return;
       }
+      console.log(values,'val');
       this.props.userLogin(values);
     });
+  };
+  //登录验证逻辑
+  loginIt = () => {
+    Tools.clear();
+    this.loginService.login({
+      userName: this.state.value.username,
+      password: Tools.hexMd5(`${this.state.value.password}salt`),
+      code: this.state.value.code,
+      token: this.state.token,
+    })
+        .then((res) => {
+          if (res) {
+            Tools.setToken(res.token);
+            Tools.setUser(res.shiroUser);
+            if (res.state === '-1') {
+              Msg.alert('该账号是默认密码，为了安全请进行修改后使用', () => {
+                this.props.history.push('/changeDefaultPwd');
+              });
+            } else {
+              this.props.history.push('/dashboard');
+            }
+          } else {
+            this.refreshCode();
+          }
+        });
   };
 
   render() {
@@ -82,12 +107,12 @@ class UserLogin extends Component {
                           size="small"
                           style={styles.inputIcon}
                       />
-                      <IceFormBinder name="account" required message="请输入账号">
-                        <Input maxLength={20} placeholder="账号" />
+                      <IceFormBinder name="username" required message="请输入账号">
+                        <Input maxLength={20} htmlType="username" placeholder="账号" />
                       </IceFormBinder>
                     </Col>
                     <Col>
-                      <IceFormError name="account" />
+                      <IceFormError name="username" />
                     </Col>
                   </Row>
 

@@ -60,22 +60,21 @@ const userLoginFailure = (payload) => {
 
 export const userLogin = (params) => {
   return async (dispatch) => {
+    console.log(dispatch);
     dispatch(userLoginRequest());
     try {
       const response = await login(params);
-
+      console.log(response,'res');
       dispatch(userLoginSuccess(response.data));
-
       if (response.data.status === 200) {
         setAuthority(response.data.currentAuthority);
-
+        //更新权限
         reloadAuthorized();
-
-        dispatch(push('/'));
+        dispatch(push('/dashboard'));
+        Feedback.toast.success('登录成功');
       } else {
         Feedback.toast.error('账号或者密码错误');
       }
-
       return response.data;
     } catch (error) {
       dispatch(userLoginFailure(error));
