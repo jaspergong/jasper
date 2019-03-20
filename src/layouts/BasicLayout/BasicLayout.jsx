@@ -29,6 +29,7 @@ export default class BasicLayout extends Component {
 
     this.state = {
       isScreen: undefined,
+      visible: false,
     };
   }
 

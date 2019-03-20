@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Balloon, Icon } from '@icedesign/base';
+import { Balloon, Icon, Button, Dialog } from '@icedesign/base';
 import IceImg from '@icedesign/img';
 import Layout from '@icedesign/layout';
 import Menu from '@icedesign/menu';
